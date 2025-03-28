@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222; /* Dark background */
+            color: #fff; /* Bright text */
+            padding: 20px;
+            width: 350px; /* Increased popup width */
+            height: 190px; /* Increased popup height */
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            background-color: #ff3b30; /* Red button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #ff5c5c; /* Lighter red on hover */
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffcc00; /* Yellow text for results */
+        }
+    </style>
+</head>
+<body>
+    <h3>🔍 Phishing URL Detector</h3>
+    <input type="text" id="urlInput" placeholder="Enter URL to check">
+    <button id="checkBtn">Check URL</button>
+    <p id="result"></p>
+    <script src="popup.js"></script>
+</body>
+</html>
