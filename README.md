@@ -28,6 +28,7 @@ A lightweight Chrome Extension that helps users detect potentially malicious or 
 
 ```bash
 git clone https://github.com/yourusername/phishing-detector-extension.git
+```
 
 Or simply download the ZIP and extract it.
 
@@ -56,3 +57,6 @@ with your actual [Google Safe Browsing API key](https://developers.google.com/sa
 ---
 
 ## 📸 Demo
+
+_Add screenshots or a screen recording of your extension in action here._
+
