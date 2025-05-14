@@ -1,42 +1,53 @@
-🛡️ Phishing URL Detector (Chrome Extension)
-A lightweight Chrome Extension that helps users detect potentially malicious or phishing URLs using Google's Safe Browsing API.
+# Phishing-URL-Detector
+This Phishing Link Detector is a Chrome extension that identifies and warns users about malicious URLs using Google's Safe Browsing API. It scans URLs in real-time and alerts users to potential phishing threats. Stay protected while browsing with instant phishing detection!
+# 🛡️ Phishing URL Detector
 
-⚙️ Features
-🔐 Real-time URL scanning using the Google Safe Browsing API.
+A lightweight yet powerful Python-based Phishing URL Detection Tool that analyzes URLs using feature-based heuristics and machine learning to identify potential phishing attempts.
 
-🧠 Detection of phishing, malware, and unwanted software URLs.
+---
 
-💬 User-friendly interface with visual alerts (Safe, Phishing, or Error).
+## 🚀 Features
 
-💡 Client-side only — no backend required.
+- 🔍 Detects phishing links based on URL patterns and red flags  
+- 🔒 Built with cybersecurity best practices  
+- 🧪 Test mode with phishing datasets  
+- 📊 Optionally export results as CSV or JSON  
 
-🧩 How It Works
-User enters a URL into the popup.
+---
 
-The extension sends the URL to the Google Safe Browsing API.
+## 📸 Screenshots
 
-The API returns whether the URL is safe or flagged as malicious.
 
-The extension displays the result instantly.
+---
 
-🛠️ Installation
-1. Clone or Download
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/phishing-detector-extension.git
-Or simply download as ZIP and extract.
+## 🛠️ How It Works
 
-2. Add to Chrome
-Open Chrome and navigate to chrome://extensions/.
+The tool extracts a set of features from a given URL such as:
 
-Enable Developer Mode (top right).
+- Presence of `@`, `//`, or IP-based URLs
+- URL length and depth
+- Presence of suspicious TLDs or domains
+- HTTPS usage and SSL certificate validity
+- Redirection count
+- Domain age (via WHOIS)
 
-Click Load unpacked and select the project folder.
+These features are then used to:
+- Flag basic phishing heuristically, or
+- Predict using a trained machine learning model (optional)
 
-3. Add Google API Key
-Open popup.js.
+---
 
-Replace const API_KEY = "API_KEY" with your Google Safe Browsing API key.
+## 🔧 Requirements
 
-Get your API key here: https://developers.google.com/safe-browsing/v4/get-started
+- Python 3.7+
+- `requests`
+- `scikit-learn`
+- `pandas`
+- `tldextract`
+- `joblib`
+- `colorama` (for CLI coloring)
+
+Install all dependencies:
+
+```bash
+pip install -r requirements.txt
